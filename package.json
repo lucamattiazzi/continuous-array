@@ -1,0 +1,33 @@
+{
+	"name": "continuous-array",
+	"version": "0.1.0",
+	"description": "A proxy that turns a numeric array in a continuous array",
+	"license": "MIT",
+	"repository": "YeasterEgg/continuous-array",
+	"author": {
+		"name": "Yeasteregg",
+		"email": "l.d.mattiazzi@gmail.com",
+		"url": "https://grokked.it"
+	},
+	"engines": {
+		"node": ">=6"
+	},
+	"scripts": {
+		"watch": "tsc --watch",
+		"build": "tsc"
+	},
+	"main": "dist/index.js",
+	"files": [
+		"dist/"
+	],
+	"types": "dist/index.d.ts",
+	"keywords": [
+		"proxy",
+		"rest"
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"@types/node": "^11.10.4",
+		"typescript": "^3.3.3333"
+	}
+}
