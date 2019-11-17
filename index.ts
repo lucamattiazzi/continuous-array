@@ -1,9 +1,10 @@
 const config = {
-	get: (obj: number[], key: number): number | undefined => {
+	get: (obj: number[], key: string | number | symbol) => {
+		if (typeof key === 'symbol') return obj[key]
 		const keyNum = Number(key)
-		if (isNaN(keyNum) || keyNum < 0) return obj[keyNum]
+		if (isNaN(keyNum) || keyNum < 0) return obj[key]
 		const remainder = keyNum % 1
-		if (remainder === 0 && keyNum >= 0) return obj[keyNum]
+		if (remainder === 0) return obj[keyNum]
 		const previous = obj[Math.floor(keyNum)]
 		if (previous === undefined) return undefined
 		const next = obj[Math.ceil(keyNum)]

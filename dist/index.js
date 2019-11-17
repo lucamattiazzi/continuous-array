@@ -2,11 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const config = {
     get: (obj, key) => {
+        if (typeof key === 'symbol')
+            return obj[key];
         const keyNum = Number(key);
         if (isNaN(keyNum) || keyNum < 0)
-            return obj[keyNum];
+            return obj[key];
         const remainder = keyNum % 1;
-        if (remainder === 0 && keyNum >= 0)
+        if (remainder === 0)
             return obj[keyNum];
         const previous = obj[Math.floor(keyNum)];
         if (previous === undefined)
