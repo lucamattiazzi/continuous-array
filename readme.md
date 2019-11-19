@@ -2,8 +2,8 @@
 
 A function that turns a numeric array into a continuous array that can get float keys returning the linear interpolation for data.
 
-```
-const { continuousArray } = require('./dist/index')
+```js
+const { continuousArray } = require('continuous-array')
 const array = [1, 2, 4]
 const continuous = continuousArray(array)
 
