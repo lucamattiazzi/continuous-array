@@ -1,6 +1,6 @@
 {
 	"name": "continuous-array",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "A proxy that turns a numeric array in a continuous array",
 	"license": "MIT",
 	"repository": "YeasterEgg/continuous-array",
